@@ -2,7 +2,7 @@
 ----------------------------------------------------------------
 <h3><%=@tweet.id%>. <%=@tweet.content%></h3>
 ----------------------------------------------------------------
-<%if @tweet.user.id == current_user.id %>
+<%if @tweet.user_id == current_user.id %>
 
 <p><strong>Tweet Settings</strong></p>
 
