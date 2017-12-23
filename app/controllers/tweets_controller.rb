@@ -12,12 +12,12 @@ class TweetsController < ApplicationController
   get '/tweets/new' do
     if is_logged_in?
       if params[:content] != ""
-      erb :'tweets/create_tweet'
+        erb :'tweets/create_tweet'
+      else
+        redirect("/tweets/new")
+      end
     else
-      redirect("/tweets/new")
-    end
-  else
-    redirect("/login")
+      redirect("/login")
   end
 
   get '/tweets/:id' do
