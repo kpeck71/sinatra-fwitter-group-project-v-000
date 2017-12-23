@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
     if params[:content] != ""
       erb :'tweets/create_tweet'
     else
-      redirect("/login")
+      redirect("/tweets/new")
     end
   end
 
